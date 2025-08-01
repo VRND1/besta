@@ -143,7 +143,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Besta Restaurant. All rights
             reserved. | Developed By:{" "}
             <a
-              href="https://vrnd.tech"
+              href="https://brandweave.in/"
               target="_blank"
               rel="noopener noreferrer"
               className="developer-link"
