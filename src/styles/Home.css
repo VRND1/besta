@@ -54,6 +54,48 @@ body {
   z-index: 2;
 }
 
+.hero-title {
+  font-size: 3.5rem;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-family: "Libre Baskerville", serif;
+  color: #f9f4d2;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .reservation-button {
   display: inline-block;
   background-color: #d35400;
@@ -74,6 +116,38 @@ body {
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fixed Menu Button */
+.fixed-menu-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.menu-button {
+  display: inline-block;
+  background-color: #d35400;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: "Libre Baskerville", serif;
+  border: 2px solid #d35400;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button:hover {
+  background-color: #b94500;
+  border-color: #b94500;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .hero-overlay h1 {
@@ -126,6 +200,24 @@ body {
 
   .hero-overlay {
     padding-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .fixed-menu-button {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .menu-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -181,9 +273,27 @@ body {
     padding-bottom: 1.5rem;
   }
 
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
   .speciality-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .fixed-menu-button {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .menu-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
