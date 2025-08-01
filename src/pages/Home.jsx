@@ -95,15 +95,21 @@ export default function Home() {
               <img src={img} alt={`Slide ${index + 1}`} className="hero-img" />
               <div className="hero-overlay">
                 <div className="hero-content">
-                  <Link to="/menu" className="reservation-button">
-                    MENU
-                  </Link>
+                  <h1 className="hero-title">Welcome To Besta</h1>
+                  <p className="hero-subtitle">The Indian Kitchen</p>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
       </section>
+
+      {/* Fixed Menu Button */}
+      <div className="fixed-menu-button">
+        <Link to="/menu" className="menu-button">
+          MENU
+        </Link>
+      </div>
 
       <section
         className="parallax-section"
