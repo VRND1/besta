@@ -1,0 +1,56 @@
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 10%;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* AOS: Apply fade-in effect when the image appears */
+.about-img {
+  /* By default, AOS will handle visibility on scroll */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* AOS: Fade-in effect for text content */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  font-family: 'Open Sans', sans-serif;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Make the heading stand out with a dark color */
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #555; /* Slightly lighter for the paragraph text */
+  line-height: 1.6;
+  text-align: justify;
+  opacity: 0.8;
+  transition: opacity 1s ease;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 2rem 5%;
+  }
+
+  .about-img img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,131 @@
+/* Only the menu page background is white */
+.menu-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for the menu section */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Header section */
+.menu-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu-title {
+  font-size: 2.8rem;
+  color: #5d2a1f;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Button for reservation */
+/* Button for reservation */
+.reservation-button {
+  padding: 12px 28px;
+  background-color: #5d2a1f;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.reservation-button:hover {
+  background-color: #8a3a2e;
+}
+
+
+/* Image gallery grid */
+.menu-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Individual image container */
+.menu-image {
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.menu-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.menu-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.menu-image:hover img {
+  transform: scale(1.04);
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+  .menu-title {
+    font-size: 2.2rem;
+  }
+
+  .menu-gallery {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-title {
+    font-size: 1.8rem;
+  }
+
+  .reservation-button {
+    font-size: 0.95rem;
+    padding: 10px 22px;
+  }
+
+  .menu-container {
+    padding: 80px 15px 40px;
+  }
+
+  .menu-gallery {
+    gap: 20px;
+  }
+}
+/* White background for the entire screen */
+.menu-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

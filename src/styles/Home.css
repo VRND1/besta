@@ -1,0 +1,338 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO CAROUSEL */
+.hero-carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  padding-bottom: 4rem;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.reservation-button {
+  display: inline-block;
+  background-color: #d35400;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: "Libre Baskerville", serif;
+  border: 2px solid #d35400;
+}
+
+.reservation-button:hover {
+  background-color: #b94500;
+  border-color: #b94500;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+/* PARALLAX SECTION */
+.parallax-section {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  z-index: 0;
+}
+
+/* iPhone & small screens fix */
+@media screen and (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .hero-img {
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .speciality-image img {
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .reservation-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-overlay {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Tablet optimizations */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-img {
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .speciality-image img {
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .reservation-button {
+    padding: 1rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  .speciality-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Additional mobile optimizations */
+@media screen and (max-width: 480px) {
+  .hero-img {
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .speciality-image img {
+    object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .reservation-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-overlay {
+    padding-bottom: 1.5rem;
+  }
+
+  .speciality-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.parallax-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.parallax-overlay .headline {
+  font-size: 3.5rem;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+}
+
+.parallax-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Libre Baskerville", serif;
+}
+
+/* SPECIALITY SECTION */
+.speciality-section {
+  width: 100vw;
+  padding: 6rem 10% 6rem 10%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.speciality-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.speciality-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.speciality-header h2 {
+  font-size: 3.5rem;
+  font-family: "Libre Baskerville", serif;
+  color: black;
+}
+
+.speciality-header p {
+  font-size: 1.2rem;
+  font-family: "Libre Baskerville", serif;
+  margin-top: 1rem;
+}
+
+/* Grid styling remains unchanged */
+.speciality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.speciality-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.speciality-card:hover {
+  transform: translateY(-8px);
+}
+
+.speciality-image {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.speciality-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.category-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(123, 45, 38, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.speciality-content {
+  padding: 2rem;
+}
+
+.speciality-content h3 {
+  font-size: 1.5rem;
+  font-family: "Libre Baskerville", serif;
+  color: #3a1f0f;
+}
+
+.speciality-content p {
+  font-size: 1rem;
+  font-family: "Libre Baskerville", serif;
+  color: #4b3c2e;
+  line-height: 1.6;
+}
+
+.speciality-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.speciality-overlay h1 {
+  font-size: 3.5rem;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.speciality-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Libre Baskerville", serif;
+}
+
+/* Remove space between sections */
+.hero-carousel,
+.parallax-section,
+.speciality-section {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,235 @@
+/* Sitemap Styles */
+.sitemap-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f8f3e2;
+  min-height: 100vh;
+}
+
+.sitemap-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  padding: 3rem 0 2rem 0;
+  border-bottom: 2px solid #d35400;
+}
+
+.sitemap-header h1 {
+  color: #3a1f0f;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.sitemap-header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sitemap-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sitemap-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.sitemap-section h2 {
+  color: #3a1f0f;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d35400;
+  font-family: "Libre Baskerville", serif;
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.sitemap-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e8e8e8;
+}
+
+.sitemap-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: #d35400;
+}
+
+.sitemap-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.sitemap-link h3 {
+  color: #d35400;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+}
+
+.sitemap-link p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.sitemap-link:hover h3 {
+  color: #b94500;
+}
+
+.external-link {
+  position: relative;
+}
+
+.external-link::after {
+  content: "↗";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.8rem;
+  color: #d35400;
+  opacity: 0.7;
+}
+
+.contact-info-sitemap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-item-sitemap {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e8e8e8;
+}
+
+.contact-item-sitemap h3 {
+  color: #d35400;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+}
+
+.contact-item-sitemap p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sitemap-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .sitemap-header h1 {
+    font-size: 2rem;
+  }
+
+  .sitemap-header p {
+    font-size: 1rem;
+  }
+
+  .sitemap-section {
+    padding: 1.5rem;
+  }
+
+  .sitemap-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-info-sitemap {
+    grid-template-columns: 1fr;
+  }
+
+  .sitemap-item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sitemap-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .sitemap-section {
+    padding: 1rem;
+  }
+
+  .sitemap-item {
+    padding: 0.8rem;
+  }
+
+  .sitemap-link h3 {
+    font-size: 1.1rem;
+  }
+
+  .sitemap-link p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for better UX */
+.sitemap-item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for grid items */
+.sitemap-grid .sitemap-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.sitemap-grid .sitemap-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.sitemap-grid .sitemap-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.sitemap-grid .sitemap-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.sitemap-grid .sitemap-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.sitemap-grid .sitemap-item:nth-child(6) {
+  animation-delay: 0.6s;
+}

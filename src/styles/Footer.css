@@ -1,0 +1,355 @@
+.footer {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+  color: #f9f4d2;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d35400, transparent);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  padding: 4rem 10%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Footer Section Styles */
+.footer-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f9f4d2;
+  margin-bottom: 1.5rem;
+  font-family: "Libre Baskerville", serif;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #d35400;
+  border-radius: 1px;
+}
+
+/* Restaurant Info Section */
+.footer-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e8d5b7;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(211, 84, 0, 0.2);
+  color: #f9f4d2;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(211, 84, 0, 0.3);
+}
+
+.social-link:hover {
+  background: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 84, 0, 0.3);
+}
+
+.social-link i {
+  font-size: 1rem;
+}
+
+/* Quick Links Section */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #e8d5b7;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+.footer-links a::before {
+  content: "→";
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #d35400;
+}
+
+.footer-links a:hover {
+  color: #d35400;
+  padding-left: 15px;
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+}
+
+/* Contact Information */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-item i {
+  color: #d35400;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  min-width: 16px;
+}
+
+.contact-item div p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e8d5b7;
+  line-height: 1.4;
+}
+
+.contact-item div p:first-child {
+  font-weight: 500;
+  color: #f9f4d2;
+}
+
+/* Opening Hours */
+.opening-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(248, 244, 230, 0.1);
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.hours-item.special {
+  background: rgba(211, 84, 0, 0.1);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(211, 84, 0, 0.2);
+  margin-top: 0.5rem;
+}
+
+.hours-item .day {
+  font-size: 0.9rem;
+  color: #f9f4d2;
+  font-weight: 500;
+}
+
+.hours-item .time {
+  font-size: 0.85rem;
+  color: #e8d5b7;
+}
+
+.hours-item.special .day,
+.hours-item.special .time {
+  color: #d35400;
+  font-weight: 600;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 10%;
+  border-top: 1px solid rgba(248, 244, 230, 0.1);
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #e8d5b7;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: #e8d5b7;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #d35400;
+}
+
+.developer-link {
+  color: #d35400;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.developer-link:hover {
+  color: #f9f4d2;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 5%;
+  }
+
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .contact-item {
+    gap: 0.8rem;
+  }
+
+  .hours-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 2rem 3%;
+  }
+
+  .footer-bottom {
+    padding: 1rem 3%;
+  }
+
+  .footer-bottom-links {
+    gap: 1rem;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+}
+/* WhatsApp Link Styling */
+.whatsapp-link {
+  color: #f9f4d2;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.whatsapp-link i {
+  margin-left: 6px;
+  color: #25d366;
+  font-size: 1.3rem;
+}
+.google-map-link {
+  color: #d35400; /* Matches the footer's accent color */
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.google-map-link:hover {
+  color: #f9f4d2; /* White color on hover */
+  text-decoration: underline;
+}
+
+.email-link {
+  color: #f9f4d2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.email-link:hover {
+  color: #f9f4d2;
+  text-decoration: underline;
+}
+
+/* Font Awesome Icons (if not already included) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
