@@ -129,7 +129,7 @@ export default function Footer() {
           <h3>Opening Hours</h3>
           <div className="opening-hours">
             <div className="hours-item">
-              <span className="day">EVERY DAY</span>
+              <span className="day">Monday - Sunday</span>
               <span className="time">11:00 AM - 11:00 PM</span>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="developer-link"
             >
-              VRND Business Solutions
+              BrandWeave Tech Solutions
             </a>
           </p>
           <div className="footer-bottom-links">
