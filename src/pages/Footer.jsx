@@ -25,7 +25,7 @@ export default function Footer() {
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
-              href="https://www.instagram.com/besta_restaurant?igsh=bzFjOTBtZGl4OHJm"
+              href="https://www.instagram.com/besta_the_indian_kitchen?igsh=MTlkOWU0MjFoeXkweA%3D%3D&utm_source=qr"
               className="social-link"
               aria-label="Instagram"
               target="_blank"
