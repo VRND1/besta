@@ -1,130 +1,85 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 import "../styles/Contact.css";
 
 export default function Contact() {
-  const form = useRef();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    Phone: "",
-    Enquiryfor: "Reservation",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("");
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("");
-
-    // EmailJS configuration
-    const serviceId = "service_4syn2k6";
-    const templateId = "template_extxddr";
-    const publicKey = "Z9Emn7EtRWRaO7_D1";
-
-    emailjs
-      .sendForm(serviceId, templateId, form.current, publicKey)
-      .then((result) => {
-        console.log("SUCCESS!", result.text);
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          Phone: "",
-          Enquiryfor: "Reservation",
-          message: "",
-        });
-      })
-      .catch((error) => {
-        console.log("FAILED...", error.text);
-        setSubmitStatus("error");
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
-  };
-
   return (
     <div className="page-container">
       <section className="contact-section">
         <h2>Contact Us</h2>
-        <form ref={form} className="contact-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
+        
+        <div className="contact-page-info">
+          <div className="contact-page-item contact-page-item-top">
+            <div className="contact-page-icon">🕒</div>
+            <div className="contact-page-details">
+              <h3>Opening Hours</h3>
+              <p>Monday - Sunday<br />11:00 AM - 11:00 PM</p>
+            </div>
+          </div>
 
-          <input
-            type="tel"
-            name="Phone"
-            placeholder="Your Phone Number"
-            value={formData.Phone}
-            onChange={handleInputChange}
-            required
-          />
+          <div className="contact-page-item contact-page-item-top">
+            <div className="contact-page-icon">📞</div>
+            <div className="contact-page-details">
+              <h3>Phone</h3>
+              <a
+                href="https://wa.me/917891329789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-phone-link"
+              >
+                +91 789-1329-789
+              </a>
+            </div>
+          </div>
 
-          <label htmlFor="enquiryFor" style={{ marginTop: "10px" }}>
-            Enquiry For*
-          </label>
-          <select
-            name="Enquiryfor"
-            id="enquiryFor"
-            value={formData.Enquiryfor}
-            onChange={handleInputChange}
-            required
-            className="custom-dropdown"
+          <div className="contact-page-item contact-page-item-top">
+            <div className="contact-page-icon">✉️</div>
+            <div className="contact-page-details">
+              <h3>Email</h3>
+              <a href="mailto:hello@besta.co.in" className="contact-email-link">
+                hello@besta.co.in
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-page-item contact-page-item-address">
+            <div className="contact-page-icon">📍</div>
+            <div className="contact-page-details">
+              <h3>Address</h3>
+              <p>
+                1, Sri, Door No.54, 20/6-10, Gurunanak Nagar Road,<br />
+                beside DBS Bank, Kanaka Durga Gazetted Officers Colony,<br />
+                Vijayawada, Andhra Pradesh 520007
+              </p>
+              <a
+                href="https://maps.app.goo.gl/pRY5sjFAFR6DtgUXA?g_st=ipc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-map-link"
+              >
+                View on Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="contact-buttons">
+          <a
+            href="https://www.eazydiner.com/vijayawada/besta-restaurant-gurunanak-colony-vijayawada-708012"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-button reserve-button"
           >
-            <option value="Reservation">Reservation</option>
-            <option value="Feedback">Feedback</option>
-          </select>
-
-          <textarea
-            rows="5"
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleInputChange}
-            required
-          ></textarea>
-
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </button>
-
-          {submitStatus === "success" && (
-            <div className="success-message">
-              Thank you! Your message has been sent successfully.
-            </div>
-          )}
-
-          {submitStatus === "error" && (
-            <div className="error-message">
-              Sorry, there was an error sending your message. Please try again.
-            </div>
-          )}
-        </form>
+            Reserve Your Table
+          </a>
+          <a
+            href="https://order.besta.co.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="action-button order-button"
+          >
+            Order Online
+          </a>
+        </div>
       </section>
     </div>
   );

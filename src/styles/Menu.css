@@ -1,6 +1,6 @@
-/* Only the menu page background is white */
+/* Menu page background matching other pages */
 .menu-page {
-  background-color: #ffffff;
+  background-color: #f8f3e2;
   min-height: 100vh;
   width: 100%;
   padding: 0;
@@ -14,7 +14,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 20px 60px;
-  background-color: #ffffff;
+  background-color: transparent;
   box-sizing: border-box;
 }
 
@@ -55,21 +55,26 @@
 }
 
 
-/* Image gallery grid */
+/* Image gallery - vertical scroll layout */
 .menu-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: center;
 }
 
 /* Individual image container */
 .menu-image {
+  width: 100%;
+  max-width: 900px;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #ffffff;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .menu-image img {
@@ -77,17 +82,12 @@
   height: auto;
   display: block;
   border-radius: 14px;
-  transition: transform 0.3s ease;
 }
 
-/* Hover effect */
-.menu-image:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.menu-image:hover img {
-  transform: scale(1.04);
+/* AOS animation will handle the fade-in effect */
+.menu-image[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive styling */
@@ -97,8 +97,7 @@
   }
 
   .menu-gallery {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 30px;
   }
 }
 
@@ -117,15 +116,7 @@
   }
 
   .menu-gallery {
-    gap: 20px;
+    gap: 25px;
+    margin-top: 30px;
   }
-}
-/* White background for the entire screen */
-.menu-page {
-  background-color: #ffffff;
-  min-height: 100vh;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
